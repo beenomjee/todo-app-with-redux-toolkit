@@ -1,0 +1,129 @@
+.container {
+  width: 1000px;
+  background: #fff;
+  box-shadow: 0 0 4 rgba(0, 23, 71, 0.15);
+  border-radius: 32px;
+  padding: 72px 200px 50px;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 72px 50px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 72px 20px 50px;
+  }
+}
+
+.container .h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57px;
+  letter-spacing: 0.01em;
+  color: #11175e;
+}
+
+.container .inputContainer {
+  margin-top: 40px;
+  position: relative;
+}
+
+.container .inputContainer input {
+  display: block;
+  height: 60px;
+  border: 1px solid #eeeeee;
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #000000cc;
+  padding-right: 110px;
+}
+
+.container .inputContainer input:hover,
+.container .inputContainer input:focus {
+  border-color: #2d70fd;
+}
+
+.container .inputContainer input::placeholder {
+  color: #b1bacb;
+}
+
+.container .inputContainer button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translate(0px, -50%);
+  background-color: #2d70fd;
+  border: 1px solid #2d70fd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  padding: 12px 24px;
+}
+
+.container .inputContainer button:hover {
+  opacity: 0.7;
+}
+
+.container .inputContainer button:active {
+  transform: translate(0px, -50%) scale(0.98);
+}
+
+.container .todos {
+  margin-top: 55px;
+  height: 260px;
+  overflow: auto;
+  padding: 20px 20px 20px 70px;
+}
+
+@media (max-width: 500px) {
+  .container .todos p {
+    margin-left: -50px;
+  }
+}
+
+.container .todos > div:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.container .bottom {
+  padding: 25px 20px 0 20px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .bottom span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #b1bacb;
+  user-select: none;
+}
+
+.container .bottom span:nth-child(2):hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.container .bottom span:nth-child(2):active {
+  transform: scale(0.95);
+}

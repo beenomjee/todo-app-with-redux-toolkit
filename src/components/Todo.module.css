@@ -1,0 +1,84 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.todo input[type="checkbox"] {
+  display: none;
+}
+.todo label {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #001747;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s;
+  flex-basis: 85%;
+  line-break: anywhere;
+}
+
+.todo label::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  aspect-ratio: 1/1;
+  border: 1px solid #eeeeee;
+  top: 50%;
+  left: 0px;
+  transform: translate(calc(-100% - 16px), -50%);
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.todo label:hover {
+  color: #2d70fd;
+}
+
+.todo label:hover::before {
+  border: 1px solid rgba(45, 112, 253, 0.15);
+}
+
+.todo input[type="checkbox"]:checked ~ label {
+  color: #8f98a8;
+  text-decoration: underline;
+  text-decoration-line: line-through;
+}
+
+.todo input[type="checkbox"]:checked ~ label::before {
+  background-color: #00d8a7;
+  border-color: #00d8a7;
+}
+
+.todo label::after {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(calc(-100% - 27px), -50%);
+  font-weight: bold;
+  color: #fff;
+  transform-origin: center center;
+  scale: 0;
+}
+
+.todo input[type="checkbox"]:checked ~ label::after {
+  scale: 1;
+  transition: all 0.2s;
+}
+
+.todo button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.todo button:hover {
+  color: #2d70fd;
+}
